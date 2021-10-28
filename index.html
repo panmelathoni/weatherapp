@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,700;1,100;1,200;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  </head>
+  <body>
+    <div class="container p-3 m-3 border">
+      <div class="weather-app">
+        <form id="form">
+          <input
+            type="text"
+            placeholder="Location "
+            class="input-field"
+            autocomplete="off"
+            autofocus
+            id="inputCity"
+            value=""
+          />
+          <button><i class="fas fa-search search-emoji"></i></button>
+        </form>
+
+        <h1 class="selected-city">
+          <i class="fas fa-map-marker-alt map-padding"></i
+          ><span id="heading">Luxembourg</span>
+        </h1>
+
+        <div class="info">
+          <p class="date" id="date-today"></p>
+
+          <p class="temperature">
+            <span class="emoji-weather-temp">☀️ </span>
+            <span id="temperature-change">16°C</span>
+          </p>
+
+          <div class="cel-fah">
+            <button class="btn-temp" id="celcius">°C</button>
+            <span class="btn-temp">|</span>
+            <button class="btn-temp" id="fahrenheit">°F</button>
+          </div>
+
+          <p class="weather-text">Sunny</p>
+          <p class="mim-max-info">8°C / 16°C Feels like 16°C</p>
+        </div>
+
+        <div class="row next-days">
+          <div class="col">
+            <p>Wednesday</p>
+            <span>🌤</span>
+            <ul>
+              <li>8 °C min</li>
+              <li>16 °C max</li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <p>Thrursday</p>
+            <span>⛈</span>
+            <ul>
+              <li>3°C min</li>
+              <li>11 °C max</li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <p>Friday</p>
+            <span>🌧</span>
+            <ul>
+              <li>6 °C min</li>
+              <li>12 °C max</li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <p>Saturday</p>
+            <span>🌤</span>
+            <ul>
+              <li>8 °C min</li>
+              <li>19 °C max</li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <p>Sunday</p>
+            <span>☀️</span>
+            <ul>
+              <li>12 °C min</li>
+              <li>18 °C max</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end container -->
+
+    <script src="src/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  </body>
+</html>

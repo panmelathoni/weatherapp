@@ -1,0 +1,104 @@
+body {
+  max-width: 800px;
+}
+.container {
+  font-family: "Roboto Mono", monospace;
+  background: radial-gradient(
+    circle at 12.3% 19.3%,
+    rgb(85, 88, 218) 0%,
+    rgb(95, 209, 249) 100.2%
+  );
+  color: #fff;
+}
+
+.weather-app {
+  padding: 20px;
+  /* margin: 10px auto; */
+}
+
+.btn-temp {
+  font-size: 15px;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 0;
+}
+
+.btn-temp:hover {
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.info {
+  text-align: center;
+}
+
+.date {
+  font-size: 11px;
+}
+
+.temperature {
+  font-size: 55px;
+}
+
+.emoji-weather-temp {
+  margin: 0;
+}
+
+.cel-fah {
+  margin-top: -22px;
+}
+
+.mim-max-info {
+  font-size: 13px;
+}
+
+.weather-text {
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 12px;
+}
+
+.input-field {
+  width: auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+::placeholder {
+  color: #fff;
+  font-size: 14px;
+}
+
+.search-emoji {
+  font-size: 20px;
+  align-self: center;
+  color: #fff;
+}
+
+.selected-city {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.map-padding {
+  padding: 8px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.next-days {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
