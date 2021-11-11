@@ -9,6 +9,8 @@ function showCurrentPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&&units=metric`;
 
   axios.get(apiUrl).then(function (response) {
+    let currentCityName = document.querySelector("#heading");
+    currentCityName.innerHTML = response.data.name;
     treatResponse(response);
   });
 }
