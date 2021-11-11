@@ -24,45 +24,88 @@
       rel="stylesheet"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
   </head>
   <body>
-    <div class="container p-3 m-3 border">
+    <div class="container">
       <div class="weather-app">
         <form id="form">
           <input
             type="text"
-            placeholder="Location "
+            placeholder="Enter city name... "
             class="input-field"
-            autocomplete="off"
-            autofocus
+            autocomplete="on"
             id="inputCity"
             value=""
           />
-          <button><i class="fas fa-search search-emoji"></i></button>
+          <button class="btn-search-engine btn-search">
+            Search
+            <!-- <i class="fas fa-search btn-emoji btn-emoji-search"></i> -->
+          </button>
+          <button class="location btn-search-engine btn-location">
+            Location  📍
+            <!-- <i class="fas fa-map-marker-alt btn-emoji btn-emoji-map"></i> -->
+          </button>
         </form>
-
-        <h1 class="selected-city">
-          <i class="fas fa-map-marker-alt map-padding"></i
-          ><span id="heading">Luxembourg</span>
-        </h1>
-
-        <div class="info">
+        <div class="main-information">
+          <h1 class="selected-city">
+            <span id="heading">Luxembourg</span>
+          </h1>
           <p class="date" id="date-today"></p>
 
-          <p class="temperature">
-            <span class="emoji-weather-temp">☀️ </span>
-            <span id="temperature-change">16°C</span>
-          </p>
+          <!-- * * * caixa lado esquerdo * * *  -->
+          <div class="row">
+            <div class="col">
+              <img
+                class="emoji-weather-temp"
+                src="src/assets/sol.gif"
+                alt="weather-img"
+              />
 
-          <div class="cel-fah">
-            <button class="btn-temp" id="celcius">°C</button>
-            <span class="btn-temp">|</span>
-            <button class="btn-temp" id="fahrenheit">°F</button>
+              <div class="row center-temp">
+                <div class="col">
+                  <p class="temperature">
+                    <span id="temperature-change"></span> °C
+                  </p>
+                </div>
+
+                <div
+                  class="col align-self-center input-group btn-group-cel-fah"
+                >
+                  <div class="input-group-prepend">
+                    <button class="btn-temp active" id="celsius">°C</button>
+                  </div>
+                  <div class="input-group-append">
+                    <button class="btn-temp" id="fahrenheit">°F</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mim-max-info row align-self-center">
+                <p>
+                  Min <span class="temp-min"></span>°c /
+
+                  <span class="temp-max"></span> °c Max
+                </p>
+              </div>
+            </div>
+
+            <div class="col">
+              <p class="weather-text"></p>
+              <div class="feels-like-container">
+                Feels Like: <span class="feels-like"></span> °c
+              </div>
+            </div>
           </div>
-
-          <p class="weather-text">Sunny</p>
-          <p class="mim-max-info">8°C / 16°C Feels like 16°C</p>
         </div>
 
         <div class="row next-days">
