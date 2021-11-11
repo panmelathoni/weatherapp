@@ -1,59 +1,165 @@
-body {
-  max-width: 800px;
+body,
+* {
+  max-width: 100% !important;
 }
+
+body {
+  background-image: url("../src/assets/sunrise.jpg");
+  background-size: 100% auto;
+  background-color: black;
+}
+
 .container {
-  font-family: "Roboto Mono", monospace;
-  background: radial-gradient(
-    circle at 12.3% 19.3%,
-    rgb(85, 88, 218) 0%,
-    rgb(95, 209, 249) 100.2%
-  );
+  max-width: 900px !important;
+
+  font-family: "Bad Script", cursive;
+  background-color: transparent;
   color: #fff;
+}
+
+.input-field {
+  width: 50%;
+  border: 3px solid #b5deff;
+  border-radius: 10px;
+  background-color: #fff;
+  height: 50px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::placeholder {
+  color: #a8ceff;
+  font-size: 20px;
+  padding: 10px;
 }
 
 .weather-app {
+  max-width: 900px !important;
+  margin: 0 auto;
   padding: 20px;
-  /* margin: 10px auto; */
+  color: black;
 }
 
-.btn-temp {
-  font-size: 15px;
-  text-decoration: none;
+.btn-search-engine {
+  border-radius: 10px;
   color: #fff;
-  margin-top: 0;
+  height: 40px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  font-weight: bold;
+}
+.btn-search {
+  border: none;
+  background-color: #fbc1bf;
 }
 
-.btn-temp:hover {
+.btn-search:hover {
+  border: 3px solid #fcffa6;
   cursor: pointer;
 }
 
-button {
-  background-color: transparent;
+.btn-location {
   border: none;
+  background-color: #a8ceff;
 }
 
-.info {
+.btn-location:hover {
+  border: 3px solid #fcffa6;
+  cursor: pointer;
+}
+
+.temperature,
+#temperature-change {
+  font-family: "Roboto", sans-serif !important;
+  color: #a8ceff;
+
+  text-shadow: 2px 2px 0px #baffe3, 5px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.temperature {
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+#temperature-change {
+  font-size: 75px;
+}
+
+.center-temp {
   text-align: center;
 }
 
 .date {
-  font-size: 11px;
-}
-
-.temperature {
-  font-size: 55px;
+  font-size: 15px;
+  color: gray;
 }
 
 .emoji-weather-temp {
   margin: 0;
+  width: 120px;
+  width: 150px;
 }
 
-.cel-fah {
-  margin-top: -22px;
+.btn-group-cel-fah {
+  font-family: "Roboto", sans-serif !important;
+
+  width: auto;
+  border: 1px;
+}
+
+.btn-temp {
+  font-size: 15px;
+  width: 30px;
+  color: #fff;
+  margin-top: 20px;
+  border: none;
+  border: 2px solid #f8ffc9;
+}
+
+#celsius {
+  border-radius: 10px 0 0 10px;
+  background-color: #a8ceff;
+}
+#celsius:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #a8ceff;
+}
+
+#fahrenheit {
+  border-radius: 0px 10px 10px 0px;
+  background-color: #fbc1bf;
+}
+#fahrenheit:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #fbc1bf;
 }
 
 .mim-max-info {
-  font-size: 13px;
+  font-size: 18px;
+  width: auto;
+  color: #eb92be;
+}
+
+.feels-like-container {
+  color: #78dec7;
+  font-size: 25px;
+}
+
+.feels-like {
+  font-family: "Roboto", sans-serif !important;
+  font-style: italic;
+}
+
+/* Aqui é onde tem o border da parte com as informaçoes de tempo do dia */
+.main-information {
+  max-width: 900px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border: 3px solid rgba(186, 255, 227, 1);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
 }
 
 .weather-text {
@@ -62,31 +168,24 @@ button {
   margin-top: 12px;
 }
 
-.input-field {
-  width: auto;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-::placeholder {
-  color: #fff;
-  font-size: 14px;
-}
-
-.search-emoji {
+.btn-emoji {
   font-size: 20px;
   align-self: center;
-  color: #fff;
+}
+
+.btn-emoji-search {
+  color: #baffe3;
+}
+
+.btn-emoji-map {
+  color: #fbc1bf;
 }
 
 .selected-city {
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
   margin-top: 30px;
-  font-family: "Roboto Mono", monospace;
-  font-weight: 400;
-  font-style: italic;
+  color: #a8ceff;
 }
 
 .map-padding {

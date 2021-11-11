@@ -1,0 +1,23 @@
+#EB591B orange
+
+#E1D5A7 beje
+
+#196970 verde musgo
+
+#2DADA1 verde claro
+
+#EC6665 meio orange
+
+#EC544E oragnte forte
+
+#A33147 sangue
+
+#C21B24 vermelho mais aberto
+
+\*\*\* Segunda Opçao --> candy colors
+
+#FBC1BF rosa bebe
+#FCDBA1 orange bebe
+#F8FFC9 amarelo
+#BAFFE3 verde
+#A8CEFF azul
