@@ -9,23 +9,7 @@ function showCurrentPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&&units=metric`;
 
   axios.get(apiUrl).then(function (response) {
-    let currentCityName = document.querySelector("#heading");
-    currentCityName.innerHTML = response.data.name;
-
-    let temperature = document.querySelector("#temperature-change");
-    temperature.innerHTML = Math.round(response.data.main.temp);
-
-    let weatherDescription = document.querySelector(".weather-text");
-    weatherDescription.innerHTML = response.data.weather[0].main;
-
-    let tempMin = document.querySelector(".temp-min");
-    tempMin.innerHTML = Math.round(response.data.main.temp_min);
-
-    let tempMax = document.querySelector(".temp-max");
-    tempMax.innerHTML = Math.round(response.data.main.temp_max);
-
-    let feelsLike = document.querySelector(".feels-like");
-    feelsLike.innerHTML = Math.round(response.data.main.feels_like);
+    treatResponse(response);
   });
 }
 
@@ -47,22 +31,10 @@ function searchLocaltion(e) {
   heading.innerHTML = inputCity.value;
 
   axios.get(apiUrlCity).then(function (response) {
-    let temperature = document.querySelector("#temperature-change");
-    temperature.innerHTML = Math.round(response.data.main.temp);
-
-    let weatherDescription = document.querySelector(".weather-text");
-    weatherDescription.innerHTML = response.data.weather[0].main;
-
-    let tempMin = document.querySelector(".temp-min");
-    tempMin.innerHTML = Math.round(response.data.main.temp_min);
-
-    let tempMax = document.querySelector(".temp-max");
-    tempMax.innerHTML = Math.round(response.data.main.temp_max);
-
-    let feelsLike = document.querySelector(".feels-like");
-    feelsLike.innerHTML = Math.round(response.data.main.feels_like);
+    treatResponse(response);
   });
 }
+
 let searchCity = document.querySelector("#form");
 searchCity.addEventListener("submit", searchLocaltion);
 let heading = document.querySelector("#heading");
@@ -71,6 +43,23 @@ let dateNow = moment().format(" ddd - MMM Do YYYY, h:mm a");
 
 let text = document.querySelector("#date-today");
 text.innerHTML = dateNow;
+
+function treatResponse(response) {
+  let temperature = document.querySelector("#temperature-change");
+  temperature.innerHTML = Math.round(response.data.main.temp);
+
+  let weatherDescription = document.querySelector(".weather-text");
+  weatherDescription.innerHTML = response.data.weather[0].main;
+
+  let tempMin = document.querySelector(".temp-min");
+  tempMin.innerHTML = Math.round(response.data.main.temp_min);
+
+  let tempMax = document.querySelector(".temp-max");
+  tempMax.innerHTML = Math.round(response.data.main.temp_max);
+
+  let feelsLike = document.querySelector(".feels-like");
+  feelsLike.innerHTML = Math.round(response.data.main.feels_like);
+}
 
 function showFahrenheit() {
   let tempFah = document.querySelector("#temperature-change");
