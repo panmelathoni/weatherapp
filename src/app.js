@@ -9,8 +9,8 @@ function showCurrentPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&&units=metric`;
 
   axios.get(apiUrl).then(function (response) {
-    let currentCityName = document.querySelector("#heading");
-    currentCityName.innerHTML = response.data.name;
+    document.querySelector("#heading").innerHTML = response.data.name;
+
     treatResponse(response);
   });
 }
@@ -18,8 +18,9 @@ function showCurrentPosition(position) {
 let btnCurrentLocation = document.querySelector(".location");
 btnCurrentLocation.addEventListener("click", showPosition);
 
+// botao para pegar a localiZaçao atual
 function showPosition() {
-  showCurrentPosition();
+  console.log("clicou");
 }
 
 function searchLocaltion(e) {
@@ -48,19 +49,19 @@ text.innerHTML = dateNow;
 
 function treatResponse(response) {
   let temperature = document.querySelector("#temperature-change");
-  temperature.innerHTML = Math.round(response.data.main.temp);
+  temperature.innerHTML = Math.floor(response.data.main.temp);
 
   let weatherDescription = document.querySelector(".weather-text");
   weatherDescription.innerHTML = response.data.weather[0].main;
 
   let tempMin = document.querySelector(".temp-min");
-  tempMin.innerHTML = Math.round(response.data.main.temp_min);
+  tempMin.innerHTML = Math.floor(response.data.main.temp_min);
 
   let tempMax = document.querySelector(".temp-max");
-  tempMax.innerHTML = Math.round(response.data.main.temp_max);
+  tempMax.innerHTML = Math.floor(response.data.main.temp_max);
 
   let feelsLike = document.querySelector(".feels-like");
-  feelsLike.innerHTML = Math.round(response.data.main.feels_like);
+  feelsLike.innerHTML = Math.floor(response.data.main.feels_like);
 }
 
 function showFahrenheit() {
@@ -77,3 +78,5 @@ function showCelcius() {
 
 let celciusUnit = document.querySelector("#celcius");
 celciusUnit.addEventListener("click", showCelcius);
+
+showCurrentPosition(positon);
