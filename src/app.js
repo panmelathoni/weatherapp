@@ -78,5 +78,3 @@ function showCelcius() {
 
 let celciusUnit = document.querySelector("#celcius");
 celciusUnit.addEventListener("click", showCelcius);
-
-showCurrentPosition(positon);
