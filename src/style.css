@@ -5,7 +5,12 @@ body,
 
 body {
   background-image: url("../src/assets/sunrise.jpg");
-  background-size: 100% auto;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
   background-color: black;
 }
 
@@ -34,10 +39,8 @@ body {
 }
 
 .weather-app {
-  max-width: 900px !important;
-  margin: 0 auto;
-  padding: 20px;
-  color: black;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .btn-search-engine {
