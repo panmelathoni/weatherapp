@@ -20,7 +20,7 @@ btnCurrentLocation.addEventListener("click", showPosition);
 
 // botao para pegar a localiZaçao atual
 function showPosition() {
-  console.log("clicou");
+  navigator.geolocation.getCurrentPosition(showCurrentPosition);
 }
 
 function searchLocaltion(e) {
@@ -62,6 +62,12 @@ function treatResponse(response) {
 
   let feelsLike = document.querySelector(".feels-like");
   feelsLike.innerHTML = Math.floor(response.data.main.feels_like);
+
+  let humidity = document.querySelector(".humidity");
+  humidity.innerHTML = response.data.main.humidity;
+
+  let precipitation = document.querySelector(".precipitation");
+  precipitation.innerHTML = response.data.precipitation;
 }
 
 function showFahrenheit() {

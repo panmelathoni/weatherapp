@@ -47,13 +47,12 @@
             id="inputCity"
             value=""
           />
-          <button class="btn-search-engine btn-search">
-            Search
-            <!-- <i class="fas fa-search btn-emoji btn-emoji-search"></i> -->
-          </button>
-          <button class="location btn-search-engine btn-location">
-            Location  📍
-            <!-- <i class="fas fa-map-marker-alt btn-emoji btn-emoji-map"></i> -->
+          <button class="btn-search-engine btn-search">Search 🔎</button>
+          <button
+            class="location btn-search-engine btn-location"
+            onclick="showPosition()"
+          >
+            Location 📍
           </button>
         </form>
         <div class="main-information">
@@ -102,13 +101,17 @@
             <div class="col">
               <p class="weather-text"></p>
               <div class="feels-like-container">
-                Feels Like: <span class="feels-like"></span> °c
+                <ul>
+                  <li>Feels Like: <span class="feels-like"></span> °c</li>
+                  <li>Humidity: <span class="humidity"></span> %</li>
+                  <li>Precipitation: <span class="precipitation"></span> %</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row next-days">
+        <div class="row g-0 next-days">
           <div class="col">
             <p>Wednesday</p>
             <span>🌤</span>
