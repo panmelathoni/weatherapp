@@ -90,11 +90,12 @@ body {
 
 .center-temp {
   text-align: center;
+  margin: 0 auto;
 }
 
 .date {
-  font-size: 15px;
-  color: gray;
+  font-size: 22px;
+  color: #f37021;
 }
 
 .emoji-weather-temp {
@@ -142,18 +143,18 @@ body {
 .mim-max-info {
   font-size: 18px;
   width: auto;
-  color: #eb92be;
+  color: #e54097;
 }
 
-.feels-like-container {
-  color: #78dec7;
+.info-weather-currenty-day {
+  color: #00a98f;
   font-size: 25px;
 }
 
-.feels-like {
+/* .feels-like {
   font-family: "Roboto", sans-serif !important;
   font-style: italic;
-}
+} */
 
 /* Aqui é onde tem o border da parte com as informaçoes de tempo do dia */
 .main-information {
@@ -162,7 +163,7 @@ body {
   margin-bottom: 20px;
   border: 5px solid rgba(186, 255, 227, 1);
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
 }
 
@@ -170,6 +171,7 @@ body {
   font-size: 26px;
   font-weight: 400;
   margin-top: 12px;
+  color: black;
 }
 
 .btn-emoji {
@@ -187,9 +189,9 @@ body {
 
 .selected-city {
   text-align: center;
-  font-size: 50px;
+  font-size: 80px;
   margin-top: 30px;
-  color: #a8ceff;
+  color: #3377b5;
 }
 
 .map-padding {
@@ -203,7 +205,7 @@ ul {
 .next-days {
   width: 900px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.6);
   margin-bottom: 20px;
   border: 5px solid rgba(248, 255, 201, 1);
   border-radius: 10px;
