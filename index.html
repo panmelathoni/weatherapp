@@ -64,11 +64,13 @@
           <!-- * * * caixa lado esquerdo * * *  -->
           <div class="row">
             <div class="col">
-              <img
+              <img src="" alt="Clear" id="icon" class="emoji-weather-temp" />
+
+              <!-- <span
                 class="emoji-weather-temp"
-                src="src/assets/sol.gif"
+                id="emoji"
                 alt="weather-img"
-              />
+              ></span> -->
 
               <div class="row center-temp">
                 <div class="col">
@@ -81,10 +83,22 @@
                   class="col align-self-center input-group btn-group-cel-fah"
                 >
                   <div class="input-group-prepend">
-                    <button class="btn-temp active" id="celsius">°C</button>
+                    <button
+                      class="btn-temp active"
+                      id="celsius"
+                      click="showCelcius()"
+                    >
+                      °C
+                    </button>
                   </div>
                   <div class="input-group-append">
-                    <button class="btn-temp" id="fahrenheit">°F</button>
+                    <button
+                      class="btn-temp"
+                      id="fahrenheit"
+                      click="showFahrenheit()"
+                    >
+                      °F
+                    </button>
                   </div>
                 </div>
               </div>
@@ -111,7 +125,9 @@
           </div>
         </div>
 
-        <div class="row g-0 next-days">
+        <div class="weather-forecast" id="forecast"></div>
+
+        <!-- <div class="row g-0 next-days" id="forecast">
           <div class="col">
             <p>Wednesday</p>
             <span>🌤</span>
@@ -156,7 +172,7 @@
               <li>18 °C max</li>
             </ul>
           </div>
-        </div>
+        </div> -->
         <p>
           <a href="https://github.com/panmelathoni/weatherapp" target="_blank"
             >Open-Source-code by </a
