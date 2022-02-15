@@ -100,8 +100,7 @@ body {
 
 .emoji-weather-temp {
   margin: 0;
-  width: 120px;
-  width: 150px;
+  width: 200px;
 }
 
 .btn-group-cel-fah {
@@ -159,8 +158,8 @@ body {
 /* Aqui é onde tem o border da parte com as informaçoes de tempo do dia */
 .main-information {
   width: 900px;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 8px;
   border: 5px solid rgba(186, 255, 227, 1);
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.6);
@@ -209,8 +208,11 @@ ul {
   margin-bottom: 20px;
   border: 5px solid rgba(248, 255, 201, 1);
   border-radius: 10px;
+  padding: 10px;
+  color: red;
 }
 
-.next-days p {
+img {
+  width: 155px;
   margin-top: 10px;
 }

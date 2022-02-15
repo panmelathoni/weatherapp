@@ -64,11 +64,7 @@
           <!-- * * * caixa lado esquerdo * * *  -->
           <div class="row">
             <div class="col">
-              <img
-                class="emoji-weather-temp"
-                src="src/assets/sol.gif"
-                alt="weather-img"
-              />
+              <img src="" alt="Clear" id="icon" class="emoji-weather-temp" />
 
               <div class="row center-temp">
                 <div class="col">
@@ -76,22 +72,12 @@
                     <span id="temperature-change"></span> °C
                   </p>
                 </div>
-
-                <div
-                  class="col align-self-center input-group btn-group-cel-fah"
-                >
-                  <div class="input-group-prepend">
-                    <button class="btn-temp active" id="celsius">°C</button>
-                  </div>
-                  <div class="input-group-append">
-                    <button class="btn-temp" id="fahrenheit">°F</button>
-                  </div>
-                </div>
               </div>
 
               <div class="mim-max-info row align-self-center">
                 <p>
-                  Min <span class="temp-min"></span>°c /
+                  Min
+                  <span class="temp-min"></span>°c |
 
                   <span class="temp-max"></span> °c Max
                 </p>
@@ -104,14 +90,16 @@
                 <ul>
                   <li>Feels Like: <span class="feels-like"></span> °c</li>
                   <li>Humidity: <span class="humidity"></span> %</li>
-                  <li>Precipitation: <span class="precipitation"></span> %</li>
+                  <li>Wind Speed: <span class="wind"></span> m/s</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row g-0 next-days">
+        <div class="weather-forecast next-days" id="forecast"></div>
+
+        <!-- <div class="row g-0 next-days" id="forecast">
           <div class="col">
             <p>Wednesday</p>
             <span>🌤</span>
@@ -156,7 +144,7 @@
               <li>18 °C max</li>
             </ul>
           </div>
-        </div>
+        </div> -->
         <p>
           <a href="https://github.com/panmelathoni/weatherapp" target="_blank"
             >Open-Source-code by </a
