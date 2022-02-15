@@ -107,6 +107,7 @@ function displayForecast(response) {
 
 // essa funçao é pq ela aparece em varias funcoes.  é aqui que eu mudo os textos de acordo com a API
 function treatResponse(response) {
+  console.log(response, "treat response");
   let temperature = document.querySelector("#temperature-change");
   temperature.innerHTML = Math.floor(response.data.main.temp);
 
@@ -125,8 +126,8 @@ function treatResponse(response) {
   let humidity = document.querySelector(".humidity");
   humidity.innerHTML = response.data.main.humidity;
 
-  let precipitation = document.querySelector(".precipitation");
-  precipitation.innerHTML = response.data.precipitation;
+  let wind = document.querySelector(".wind");
+  wind.innerHTML = response.data.wind.speed;
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
@@ -137,45 +138,3 @@ function treatResponse(response) {
 
   getForecast(response.data.coord);
 }
-
-//Funçao ainda no mock para mostarr temperatura em celcius e fahenreit
-
-function showFahrenheit() {
-  let tempFah = document.querySelector("#temperature-change");
-  tempFah.innerHTML = " 66°F";
-}
-let fahrenheitUnit = document.querySelector("#fahrenheit");
-fahrenheitUnit.addEventListener("click", showFahrenheit);
-
-function showCelcius() {
-  let tempCel = document.querySelector("#temperature-change");
-  tempCel.innerHTML = " 16°C";
-}
-
-let celciusUnit = document.querySelector("#celsius");
-celciusUnit.addEventListener("click", showCelcius);
-
-// function showEmotion(response) {
-//   let weatherRes = response.data.weather[0].main;
-//   let weatherEmoji = document.querySelector("#emoji");
-
-//   console.log(weatherRes, "resposta do tempo");
-
-//   if (weatherRes == "Clouds") {
-//     weatherEmoji.appendChild(document.createElement("img")).src =
-//       "src/assets/cloud2.gif";
-//   } else if (weatherRes == "Snow") {
-//     weatherEmoji.appendChild(document.createElement("img")).src =
-//       "src/assets/snoww.gif";
-//   } else if (weatherRes == "Sky" || weatherRes == "Clear") {
-//     weatherEmoji.appendChild(document.createElement("img")).src =
-//       "src/assets/sol.gif";
-//   } else if (weatherRes == "Rain") {
-//     weatherEmoji.appendChild(document.createElement("img")).src =
-//       "src/assets/rain1.png";
-//   } else {
-//     weatherEmoji.appendChild(document.createElement("h1")).src = "deu ruim";
-//   }
-// }
-
-//displayForecast();
